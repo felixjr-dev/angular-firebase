@@ -1,0 +1,12 @@
+.form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mensaje-listado{
+      .mensaje-listado-item{
+          .imagen{
+              max-width: 200px;
+          }
+      }
+  }

@@ -1,0 +1,28 @@
+<form class="form">
+  <mat-form-field class="field">
+    <input matInput class="input"
+            name="nombre"
+            placeholder="Nombre"
+            [(ngModel)]="nombre"/>
+  </mat-form-field>
+
+  <mat-form-field class="field">
+    <input matInput class="input"
+          name="correo"
+          placeholder="Correo"
+          [(ngModel)]="correo"/>
+  </mat-form-field>
+      
+  
+  <mat-form-field class="field">
+      <input matInput class="input"
+      name="clave"
+      placeholder="Clave"
+      [(ngModel)]="clave"/>
+  </mat-form-field>
+  <p>
+      <button mat-raised-button color="primary"
+      (click)="registrar()"
+      >Registrar</button>
+  </p>
+  </form>

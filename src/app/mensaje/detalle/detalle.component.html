@@ -1,0 +1,29 @@
+<h1>Editar Mensaje</h1>
+<mat-card class="container">
+  <form class="form">
+    <mat-form-field class="field">
+      <input matInput class="input"
+        name="nombre"
+        placeholder="Nombre"
+        [(ngModel)]="mensaje.nombre">
+    </mat-form-field>
+  
+    <mat-form-field class="field">
+        <input matInput class="input"
+          name="mensaje"
+          placeholder="Mensaje"
+          [(ngModel)]="mensaje.mensaje">
+      </mat-form-field>
+  
+      <mat-form-field class="field">
+          <input matInput class="input"
+            name="correo"
+            placeholder="Correo"
+            [(ngModel)]="mensaje.correo">
+        </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="agregar()">
+        Agregar
+    </button>
+  </form>
+  </mat-card>

@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+      <span>MY APP</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="estaAutenticado">
+      <a routerLink="mensaje">Mensaje</a>
+      <a routerLink="/">Home</a>
+      <a routerLink="usuarios">Usuario</a>
+  </mat-toolbar-row>   
+  <mat-toolbar-row *ngIf="estaAutenticado">
+         <p><button mat-raised-button color="primary"
+          (click)="cerrarSesion()"
+          >Salir</button></p>
+  </mat-toolbar-row>  
+</mat-toolbar>

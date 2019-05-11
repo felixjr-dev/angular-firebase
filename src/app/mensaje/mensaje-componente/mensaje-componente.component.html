@@ -1,0 +1,33 @@
+<mat-card class="container">
+<form class="form">
+  <mat-form-field class="field">
+    <input matInput class="input"
+      name="nombre"
+      placeholder="Nombre"
+      [(ngModel)]="nombre">
+  </mat-form-field>
+
+  <mat-form-field class="field">
+      <input matInput class="input"
+        name="mensaje"
+        placeholder="Mensaje"
+        [(ngModel)]="mensaje">
+    </mat-form-field>
+
+    <mat-form-field class="field">
+        <input matInput class="input"
+          name="correo"
+          placeholder="Correo"
+          [(ngModel)]="correo">
+      </mat-form-field>
+
+      <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+      <img [src]="imgURL" *ngIf="imgURL">
+
+  <button mat-raised-button color="primary" (click)="agregar()">
+      Agregar
+  </button>
+</form>
+<app-listado></app-listado>
+</mat-card>
+<router-outlet></router-outlet>

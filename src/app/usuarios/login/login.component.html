@@ -1,0 +1,27 @@
+<form class="form">
+  <mat-form-field class="field">
+      <input matInput class="input"
+          name="correo"
+          placeholder="Correo"
+          [(ngModel)]="correo">
+      </mat-form-field>
+  
+  <mat-form-field class="field">
+      <input matInput class="input"
+      name="clave"
+      placeholder="Clave"
+      [(ngModel)]="clave">
+  </mat-form-field>
+  <p>
+      <button mat-raised-button color="primary"
+      (click)="autenticar()"
+      >Entrar</button>
+  </p>
+  <p>
+    <a class="link" (click)="mostrarDialogo('registrar')">Registrar</a>
+  </p>
+  <p>
+    <a class="link" (click)="mostrarDialogo('recoverPass')">Olvide contraseña</a>
+  </p>
+  </form>
+  

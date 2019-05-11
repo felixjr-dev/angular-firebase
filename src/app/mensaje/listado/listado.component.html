@@ -1,0 +1,13 @@
+<ul class="mensaje-listado">
+  <li class="mensaje-listado-item" *ngFor='let mensaje of mensajes | async'>
+      <p><a routerLink="detalles/{{mensaje.key}}">{{mensaje.nombre}}</a></p>
+      <p>{{mensaje.correo}}</p>
+      <p>{{mensaje.mensaje}}</p>
+      <p *ngIf="mensaje.imagen">
+        <img  [src]="mensaje.imagen" alt="imagen">
+      </p>
+      <button mat-raised-button color="primary" (click)="eliminar(mensaje.key)">
+        Eliminar
+      </button>
+  </li>
+</ul>
